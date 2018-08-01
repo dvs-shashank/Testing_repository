@@ -1,9 +1,7 @@
 end=int(input("enter any number:"))
 temp=end
-count=1
 sum=0
-while(count<=temp):
+for count in range (1,end+1,1):
     sum=sum+count
-    count+=1
 print(sum)
 

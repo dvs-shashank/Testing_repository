@@ -1,6 +1,7 @@
-n=10
 print("Hello")
-while(n>=2):
-    print(n)
-    n=n-2
+for i in range(10,0,-2):
+    print(i)
+
+    
+
 
