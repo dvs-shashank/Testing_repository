@@ -1,19 +1,24 @@
-s=input()
-s=s+" "
-i=0
-len1=-1
-while i<(len(s)-2):
-    temp=i
-    while s[temp]<=s[temp+1] and (temp)<(len(s)-2):
-        temp=temp+1
-    len2=temp-i
-    if len2>len1:
-        len1=len2
-        k=int(i)
-        le=int(temp)
-    i=temp+1
-t1=k
-t2=le
-while k<=le:
-    print(s[k])
-    k=k+1
+str = input()
+start = 0
+end = 0
+count = 0
+x = 0
+temp = x
+flag = 0
+while x < (len(str)-1):
+	y = x + 1
+	if(str[x] > str[y]):
+		flag = 1
+	if y == (len(str) - 1):
+			y += 1
+	if (x == (len(str)-2) and count < (y-temp)):
+		flag = 1
+	if flag == 1:
+		if count < (y-temp):
+			start = temp
+			end = y
+			count = end - start
+		temp = x + 1
+		flag = 0
+	x = x + 1
+print(str[start:end])
