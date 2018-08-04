@@ -1,7 +1,7 @@
 """This is a fizz buzz program"""
 N = int(input())
 I = 1
-while (I <= N):
+while(I <= N):
     if (I % 3 == 0 and I % 5 == 0): 
         print("Fizz")
         print("Buzz")
@@ -12,7 +12,3 @@ while (I <= N):
     else:
         print(I)
     I = I + 1
-
-
-
-    
