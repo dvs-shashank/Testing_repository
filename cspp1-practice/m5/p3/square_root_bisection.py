@@ -11,4 +11,3 @@ while abs(ANS**2 - NUM) >= EPS:
         HIGH = ANS
     ANS = (HIGH + LOW)/2.0
 print(ANS)
-
