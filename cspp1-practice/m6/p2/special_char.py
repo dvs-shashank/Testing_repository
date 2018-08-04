@@ -3,7 +3,7 @@ STR = input()
 LE = len(STR)
 I = 0
 X = ""
-while(I<LE):
+while I < LE:
     if (STR[I] == '!' or STR[I] == '@' or STR[I] == '#'):
         X = X + " "
     if (STR[I] == '$' or STR[I] == '%' or STR[I] == '^'):
