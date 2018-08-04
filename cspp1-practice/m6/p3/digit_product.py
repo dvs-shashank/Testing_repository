@@ -4,6 +4,8 @@ COUNT = 0
 PROD = 1
 REM = 0
 TEMP = N
+if TEMP == 0:
+    print(0)
 if TEMP < 0:
     TEMP = -(TEMP)
 while TEMP > 0:
@@ -12,5 +14,5 @@ while TEMP > 0:
     TEMP = TEMP // 10
 if N < 0:
     print(-PROD)
-else:
+if N > 0:
     print(PROD)
