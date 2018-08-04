@@ -9,7 +9,7 @@ while(I <= N):
         print("Buzz")
     elif(I % 3 == 0):
         print("Fizz")
-    elif(I % 5== 0):
+    elif(I % 5 == 0):
         print("Buzz")
     else:
         print(I)
