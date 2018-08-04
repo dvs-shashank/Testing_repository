@@ -14,6 +14,3 @@ while(I < LE):
         X = X + STR[I]
     I = I +1
 print(X)
-
-    
-        
