@@ -10,7 +10,7 @@ while TEMP > 0:
     REM = TEMP % 10
     PROD = PROD * REM
     TEMP = TEMP // 10
-if( N < 0):
+if(N < 0):
     print(-PROD)
 else:
     print(PROD)
