@@ -2,7 +2,7 @@
 NUM = int(input())
 EPS = 0.01
 LOW = 0
-HIGH = NUM 
+HIGH = NUM
 ANS = (HIGH + LOW)/2.0
 while abs(ANS**2 - NUM) >= EPS:
     if ANS**2 < NUM:
