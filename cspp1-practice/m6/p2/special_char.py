@@ -1,3 +1,4 @@
+"""Program for special characters"""
 STR = input()
 LE = len(STR)
 I = 0
