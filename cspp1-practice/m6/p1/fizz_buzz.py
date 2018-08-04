@@ -12,7 +12,3 @@ while (I <= N):
     else:
         print(I)
     I = I + 1
-
-
-
-    
