@@ -24,21 +24,21 @@
 
 
 def paying_debtoffinayear(Bal_ance, Annual_interestrate):
-   """defining paying function"""
-   Ba_l = Bal_ance
-   Pa_y = 0
-   while True:
-       i = 12
-       Ba_l = Bal_ance
-       while i != 0:
-           U_bal = Ba_l - Pa_y
-           Ba_l = U_bal + ((Annual_interestrate / 12.0) * U_bal)
-           i -= 1
-       if Ba_l > 0:
-           Pa_y += 10
-       else:
-           break
-   return Pa_y
+    """defining paying function"""
+    Ba_l = Bal_ance
+    Pa_y = 0
+    while True:
+        i = 12
+        Ba_l = Bal_ance
+        while i != 0:
+            U_bal = Ba_l - Pa_y
+            Ba_l = U_bal + ((Annual_interestrate / 12.0) * U_bal)
+            i -= 1
+        if Ba_l > 0:
+            Pa_y += 10
+        else:
+            break
+    return Pa_y
 def main():
    """Defining main"""
    data = input()
