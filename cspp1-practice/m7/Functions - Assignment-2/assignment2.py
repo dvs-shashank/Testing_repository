@@ -22,7 +22,7 @@
 # Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
 
 
-
+"""credit card"""
 def paying_debtoffinayear(bal_ance, annual_interestrate):
     """defining paying function"""
     ba_la = bal_ance
