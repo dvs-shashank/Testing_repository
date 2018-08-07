@@ -12,10 +12,10 @@ def sumofdigits(n):
     '''
     # Your code here
     pass
-    if n==0:
+    if n == 0:
     	return 0
     else:
-    	rem=n%10
+    	rem = n%10
     	return rem+sumofdigits(n//10)
 
 def main():
