@@ -40,10 +40,10 @@ def paying_debtoffinayear(Bal_ance, Annual_interestrate):
             break
     return Pa_y
 def main():
-   """Defining main"""
-   data = input()
-   data = data.split(' ')
-   data = list(map(float, data))
-   print("Lowest Payment: " + str(paying_debtoffinayear(data[0], data[1])))
+    """Defining main"""
+    data = input()
+    data = data.split(' ')
+    data = list(map(float, data))
+    print("Lowest Payment: " + str(paying_debtoffinayear(data[0], data[1])))
 if __name__ == "__main__":
    main()
