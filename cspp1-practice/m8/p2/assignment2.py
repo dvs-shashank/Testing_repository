@@ -12,8 +12,8 @@ def sumofdigits(n):
     if n == 0:
     	return 0
     else:
-    	rem = n%10
-    	return rem+sumofdigits(n//10)
+    	rem = n % 10
+    	return rem + sumofdigits(n // 10)
 def main():
     a = input()
     print(sumofdigits(int(a)))
