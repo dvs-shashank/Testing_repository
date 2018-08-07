@@ -14,10 +14,10 @@ def odd(x):
     returns: True if x is odd, False otherwise
     '''
     # Your code here
-    if (x%2!=0):
-        return True
-    else:
+    if (x%2==0):
         return False
+    else:
+        return True
 
 def main():
     data = input()
