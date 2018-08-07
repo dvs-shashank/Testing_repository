@@ -15,7 +15,7 @@ def main():
 	data = list(map(float, data))
 	# print(data)
 	for x in range(len(data)):
-		temp = str(data[x]).split('.')
+		temp = str(data[x]).split(',')
 		if(temp[1] == '0'):
 			data[x] = int(float(str(data[x])))
 		else:
