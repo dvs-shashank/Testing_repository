@@ -10,11 +10,7 @@ def oddTuples(aTup):
     returns: tuple, every other element of aTup. 
     '''
     # Your Code Here
-    odd = ()
-    for t in aTup:
-        if(t % 2 != 0):
-            odd=odd+(t,)
-    return odd
+    return aTup[ : :2]
     
 
 def main():
