@@ -19,8 +19,7 @@ def get_guessed_word(secret_word, letters_guessed):
             lists1.append("_")
         else:
             lists1.append(i)
-    return ''.join(lists1)
-            
+    return ''.join(lists1)           
 def main():
     '''
     Main function for current assignment
