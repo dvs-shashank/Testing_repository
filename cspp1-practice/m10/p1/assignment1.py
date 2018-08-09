@@ -21,7 +21,7 @@ def main():
     Main function for the given program
     '''
     user_input = input()
-    user_input = user_input.split("")
+    user_input = user_input.split()
     data = []
     for char in user_input:
         data.append(char[0])
