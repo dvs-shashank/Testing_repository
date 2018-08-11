@@ -35,7 +35,7 @@ def create_social_network(data):
     temp = []
     for i in range(len(var_list)):
         var_list1 = var_list[i].split()
-        if(var_list1[1] == 'follows'):
+        if var_list1[1] == 'follows':
             if var_list1[0] not in var_dict:
                 var_dict[var_list1[0]] = [var_list1[2]]
             else:
