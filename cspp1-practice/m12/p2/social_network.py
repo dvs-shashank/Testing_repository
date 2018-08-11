@@ -41,8 +41,10 @@ def delete_person(network, arg1):
     '''
     # remove the pass below and start writing your code
     if arg1 in network:
+        if 'd' in network:
+            del network[d]
         del network[arg1]
-    return {'d': []}
+    return network
 
 def main():
     '''
