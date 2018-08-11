@@ -1,7 +1,6 @@
 '''
     Assignment-1 Create Social Network
 '''
-
 def create_social_network(data):
     '''
         The data argument passed to the function is a string
@@ -31,16 +30,24 @@ def create_social_network(data):
         Return a empty dictionary if the string format of the data is invalid
         Empty dictionary is not None, it is a dictionary with no keys
     '''
-    var_list=data.splitlines()
-    var_dict={}
+    var_list = data.splitlines()
+    var_dict = {}
+    temp=[]
     for i in range (len(var_list)):
         var_list1=var_list[i].split()
+        print(var_list1)
         if(var_list1[1] == 'follows'):
             if var_list1[0] not in var_dict:
-                var_dict[var_list1[0]]=[var_list1[2]]
+                var_dict[var_list1[0]] = [var_list1[2]]
             else:
                 if var_list1[2] not in var_dict[var_list1[0]]:
                     var_dict[var_list1[0]].append(var_list1[2])
+    for i in  var_dict:
+        temp = var_dict[i]
+        str1 = ''.join(temp)
+        str2 = str1.split(",")
+        print(str2)
+        var_dict[i] = str2
     return var_dict
 
 def main():
