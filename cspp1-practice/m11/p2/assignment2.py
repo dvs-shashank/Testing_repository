@@ -19,8 +19,8 @@ def updateHand(hand, word):
     returns: dictionary (string -> int)
     """
     for i in word:
-        HAND[i] -= 1
-    return HAND
+        hand[i] -= 1
+    return hand
     
 
 def main():

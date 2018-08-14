@@ -26,7 +26,12 @@ def get_word_score(word, n):
     for i in word:
         if i in SCRABBLE_LETTER_VALUES:
             TOTAL += SCRABBLE_LETTER_VALUES[i]
-    return TOTAL*len(word)
+    if len(word)== n:
+        TOTAL=TOTAL*len(word)
+        TOTAL=TOTAL+50
+    else:
+        TOTAL=TOTAL*len(word)
+    return TOTAL
     
 
 
