@@ -14,11 +14,11 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    face_value=[]
-    face_value1=[]
-    for i in range (len(hand)):
+    face_value = []
+    face_value1 = []
+    for i in range(len(hand)):
         if len(hand[i]) == 2:
-            face_value= hand[i][0:1]
+            face_value = hand[i][0:1]
         if face_value == 'T' or face_value == 't':
             face_value = 10
         if face_value == 'A' or face_value == 'a':
@@ -31,17 +31,12 @@ def is_straight(hand):
             face_value = 11
         face_value = int(face_value)
         face_value1.append(face_value)
-    '''if len(hand[i]) == 3:
-        face_value = hand[i][0:2]
-        face_value = int(face_value)
-        face_value1.append(face_value)'''
     face_value1.sort(reverse=True)
-
-    count =0
+    count = 0
     for i in range(len(face_value1)-1):
         if (face_value1[i] - face_value1[i+1]) == 1:
-            count+=1
-    if count==4:
+            count+ = 1
+    if count == 4:
         return True
     else:
         return False
@@ -56,20 +51,17 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    face_value=[]
-    face_value1=[]
-    for i in range (len(hand)):
+    face_value = []
+    face_value1 = []
+    for i in range(len(hand)):
         if len(hand[i]) == 2:
-            face_value= hand[i][1:2]
+            face_value = hand[i][1:2]
             face_value1.append(face_value)
-        '''if len(hand[i]) == 3:
-            face_value = hand[i][2:3]
-            face_value1.append(face_value)'''
-    count =0
+    count = 0
     for i in range(len(face_value1)-1):
         if face_value1[i] == face_value1[i+1] :
             count+=1
-    if count==4:
+    if count == 4:
         return True
     else:
         return False
