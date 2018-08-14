@@ -38,8 +38,7 @@ def is_straight(hand):
             count = count + 1
     if count == 4:
         return True
-    else:
-        return False
+    return False
 
 
 def is_flush(hand):
@@ -63,8 +62,7 @@ def is_flush(hand):
             count = count + 1
     if count == 4:
         return True
-    else:
-        return False
+    return False
 
 
 def hand_rank(hand):
