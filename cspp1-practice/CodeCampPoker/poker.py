@@ -59,7 +59,7 @@ def is_flush(hand):
             face_value1.append(face_value)
     count = 0
     for i in range(len(face_value1)-1):
-        if face_value1[i] == face_value1[i+1] :
+        if face_value1[i] == face_value1[i+1]:
             count = count + 1
     if count == 4:
         return True
