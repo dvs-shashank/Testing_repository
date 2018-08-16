@@ -14,7 +14,7 @@ def dict_fun(hand):
             d[hand[i][0]] += 1
         else:
             d[hand[i][0]] = 1
-    return(d)
+    return d
 #dict_fun(hand)
 def is_full_house(hand):
     '''
@@ -62,7 +62,7 @@ def is_four_of_a_kind(hand):
     if(max(maxi_list) > max(temp_list)):
         temp_list = hand
         card_values = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
-        final_list=list(card_values)
+        final_list = list(card_values)
         #print(final_list)
     if(len(final_list) == 2):
         return True
