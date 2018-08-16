@@ -68,7 +68,7 @@ def is_four_of_a_kind(hand):
         return True
 def is_three_of_a_kind(hand):
     '''
-    How do we find out if it is three of a kind 
+    How do we find out if it is three of a kind
     '''
     i = 0
     maxi = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
