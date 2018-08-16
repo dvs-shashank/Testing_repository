@@ -8,13 +8,13 @@ def dict_fun(hand):
     '''
     conversion of list to dict
     '''
-    d = {}
+    dict_temp = {}
     for i in range(len(hand)):
-        if hand[i][0] in d:
-            d[hand[i][0]] += 1
+        if hand[i][0] in dict_temp:
+            dict_temp[hand[i][0]] += 1
         else:
-            d[hand[i][0]] = 1
-    return d
+            dict_temp[hand[i][0]] = 1
+    return dict_temp
 #dict_fun(hand)
 def is_full_house(hand):
     '''
