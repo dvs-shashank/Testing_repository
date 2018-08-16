@@ -20,10 +20,14 @@ def is_straight(hand):
         return True
 
     card_values = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
-    return len(card_values) == 5 and (max(card_values) - min (card_values) == 4)
+    return len(card_values) == 5 and (max(card_values) - min(card_values) == 4)
 
 
 def is_four_of_a_kind(hand):
+    '''
+    How do we find out if it is four of a kind
+    
+    '''
     i = 0
     maxi = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
     maxi_list = list(maxi)
@@ -39,33 +43,41 @@ def is_four_of_a_kind(hand):
         return True
 
 def is_three_of_a_kind(hand):
+    '''
+    How do we find out if it is three of a kind
+    
+    '''
     i = 0
     maxi = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
     maxi_list = list(maxi)
     if i == 0:
         temp_list = [0]
         i = i + 1
-    if(max(maxi_list) > max(temp_list)):
+    if max(maxi_list) > max(temp_list):
         temp_list = hand
         card_values = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
         final_list = list(card_values)
         #print(final_list)
-    if(len(final_list) == 3):
+    if len(final_list) == 3:
         return True
 
 def is_one_pair(hand):
+    '''
+    How do we find out if it is pair
+    
+    '''
     i = 0
     maxi = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
     maxi_list = list(maxi)
     if i == 0:
         temp_list = [0]
         i = i + 1
-    if(max(maxi_list) > max(temp_list)):
+    if max(maxi_list) > max(temp_list):
         temp_list = hand
         card_values = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
         final_list = list(card_values)
         #print(final_list)
-    if(len(final_list) == 4):
+    if len(final_list) == 4:
         return True
 
    
