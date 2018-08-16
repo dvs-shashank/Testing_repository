@@ -17,7 +17,7 @@ def full_house(hand):
     dict_four = {}
     dict_four = dict_fun(hand)
     return len(dict_four) == 2 and 2 in dict_four.values() and 3 in dict_four.values()
-def is_twopair(hand):
+def is_two_pair(hand):
     dict_twopair = {}
     dict_twopair = dict_fun(hand)
     return len(dict_twopair) == 3 and 2 in dict_twopair.values()
@@ -149,19 +149,19 @@ def hand_rank(hand):
 
     if is_straight(hand) and is_flush(hand):
         return 9
-    if is_fourofakind(hand):
+    if is_four_of_a_kind(hand):
         return 8
-    if is_fullhouse(hand):
+    if is_full_house(hand):
         return 7
     if is_flush(hand):
         return 6
     if is_straight(hand):
         return 5
-    if is_threeofakind(hand):
+    if is_three_of_a_kind(hand):
         return 4
-    if is_twopair(hand):
+    if is_two_pair(hand):
         return 3
-    if is_onepair(hand):
+    if is_one_pair(hand):
         return 2
     return 1
 
