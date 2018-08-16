@@ -4,6 +4,13 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 #hand=['KC','5S','AD','4S','7D']
+def get_onlyfacevalues(hand):
+    face_values = []
+    index_str = '--23456789TJQKA'
+    for c, s in hand:
+        face_values.append(index_str.index(c))
+    return sorted(face_values)
+
 def is_highcard(hand):
     return len(set(get_onlyfacevalues(hand))) == 5
 def get_handrank(hand, size):
