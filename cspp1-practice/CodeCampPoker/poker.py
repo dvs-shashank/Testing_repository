@@ -51,7 +51,7 @@ def is_straight(hand):
 
 def is_four_of_a_kind(hand):
     '''
-    How do we find out if it is four of a kind 
+    How do we find out if it is four of a kind
     '''
     i = 0
     maxi = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
@@ -59,18 +59,16 @@ def is_four_of_a_kind(hand):
     if i == 0:
         temp_list = [0]
         i = i + 1
-    if(max(maxi_list) > max(temp_list)):
+    if max(maxi_list) > max(temp_list):
         temp_list = hand
         card_values = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
         final_list = list(card_values)
         #print(final_list)
-    if(len(final_list) == 2):
+    if len(final_list) == 2:
         return True
-
 def is_three_of_a_kind(hand):
     '''
-    How do we find out if it is three of a kind
-    
+    How do we find out if it is three of a kind 
     '''
     i = 0
     maxi = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
@@ -89,7 +87,6 @@ def is_three_of_a_kind(hand):
 def is_one_pair(hand):
     '''
     How do we find out if it is pair
-    
     '''
     i = 0
     maxi = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
@@ -104,12 +101,6 @@ def is_one_pair(hand):
         #print(final_list)
     if len(final_list) == 4:
         return True
-
-   
-  
-
-
-
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -119,14 +110,11 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-
     suit_set = set()
     for each_card in hand:
         suit_set.add(each_card[1])
 
     return len(suit_set) == 1
-
-  
 
 def hand_rank(hand):
     '''
@@ -136,7 +124,6 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
-
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
     # Each card is coded as a 2 character string. Example Kind of Hearts is KH
@@ -145,7 +132,6 @@ def hand_rank(hand):
     # What would be the logic to determine if a hand is a straight or flush?
     # Let's not think about the logic in the hand_rank function
     # Instead break it down into two sub functions is_straight and is_flush
-
     # check for straight, flush and straight flush
     # best hand of these 3 would be a straight flush with the return value 3
     # the second best would be a flush with the return value 2
@@ -153,7 +139,6 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     # is_flush(hand)
-
     if is_straight(hand) and is_flush(hand):
         return 9
     if is_four_of_a_kind(hand):
@@ -179,10 +164,8 @@ def poker(hands):
         Input: List of 2 or more poker hands
                Each poker hand is represented as a list
                Print the hands to see the hand representation
-
         Output: Return the winning poker hand
     '''
-
     # the line below may be new to you
     # max function is provided by python library
     # learn how it works, in particular the key argument, from the link
