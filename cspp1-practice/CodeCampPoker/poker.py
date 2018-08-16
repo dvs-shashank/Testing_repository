@@ -12,6 +12,7 @@ def get_onlyfacevalues(hand):
     index_str = '--23456789TJQKA'
     for c_card, s_suit in hand:
         face_values.append(index_str.index(c_card))
+        s_suit=[]
     return sorted(face_values)
 
 def is_highcard(hand):
