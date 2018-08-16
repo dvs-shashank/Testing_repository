@@ -5,23 +5,31 @@
 '''
 #hand=['KC','5S','AD','4S','7D']
 def dict_fun(hand):
+    '''
+    conversion of list to dict
+    '''
     d = {}
     for i in range(len(hand)):
         if hand[i][0] in d:
-            d[hand[i][0]] +=1
+            d[hand[i][0]] += 1
         else:
             d[hand[i][0]] = 1
     return(d)
 #dict_fun(hand)
 def is_full_house(hand):
+    '''
+    detremine full_house
+    '''
     dict_four = {}
     dict_four = dict_fun(hand)
     return len(dict_four) == 2 and 2 in dict_four.values() and 3 in dict_four.values()
 def is_two_pair(hand):
+    '''
+    detremine two pair
+    '''
     dict_twopair = {}
     dict_twopair = dict_fun(hand)
     return len(dict_twopair) == 3 and 2 in dict_twopair.values()
-
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -43,8 +51,7 @@ def is_straight(hand):
 
 def is_four_of_a_kind(hand):
     '''
-    How do we find out if it is four of a kind
-    
+    How do we find out if it is four of a kind 
     '''
     i = 0
     maxi = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
