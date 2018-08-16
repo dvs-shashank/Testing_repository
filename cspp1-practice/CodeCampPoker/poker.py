@@ -3,6 +3,24 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
+#hand=['KC','5S','AD','4S','7D']
+def dict_fun(hand):
+    d = {}
+    for i in range(len(hand)):
+        if hand[i][0] in d:
+            d[hand[i][0]] +=1
+        else:
+            d[hand[i][0]] = 1
+    return(d)
+#dict_fun(hand)
+def full_house(hand):
+    dict_four = {}
+    dict_four = dict_fun(hand)
+    return len(dict_four) == 2 and 2 in dict_four.values() and 3 in dict_four.values()
+def is_twopair(hand):
+    dict_twopair = {}
+    dict_twopair = dict_fun(hand)
+    return len(dict_twopair) == 3 and 2 in dict_twopair.values()
 
 def is_straight(hand):
     '''
@@ -130,16 +148,22 @@ def hand_rank(hand):
     # is_flush(hand)
 
     if is_straight(hand) and is_flush(hand):
+        return 9
+    if is_fourofakind(hand):
+        return 8
+    if is_fullhouse(hand):
+        return 7
+    if is_flush(hand):
+        return 6
+    if is_straight(hand):
+        return 5
+    if is_threeofakind(hand):
+        return 4
+    if is_twopair(hand):
         return 3
-    elif is_flush(hand):
+    if is_onepair(hand):
         return 2
-    elif is_straight(hand):
-        return 1
-    elif is_four_of_a_kind(hand):
-       return 8
-    elif is_three_of_a_kind(hand):
-       return 9
-    return 0
+    return 1
 
 def poker(hands):
     '''
