@@ -24,50 +24,46 @@ def is_straight(hand):
 
 
 def is_four_of_a_kind(hand):
-    i=0
-    maxi=set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
-    maxi_list=list(maxi)
-    
-    if i==0:
-        temp_list=[0]
-        i+=1
-    if(max(maxi_list)>max(temp_list)):
-        temp_list=hand
+    i = 0
+    maxi = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
+    maxi_list = list(maxi)
+    if i == 0:
+        temp_list = [0]
+        i = i + 1
+    if(max(maxi_list) > max(temp_list)):
+        temp_list = hand
         card_values = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
         final_list=list(card_values)
         #print(final_list)
     if(len(final_list) == 2):
         return True
 
-
 def is_three_of_a_kind(hand):
-    i=0
-    maxi=set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
-    maxi_list=list(maxi)
-    
-    if i==0:
-        temp_list=[0]
-        i+=1
-    if(max(maxi_list)>max(temp_list)):
-        temp_list=hand
+    i = 0
+    maxi = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
+    maxi_list = list(maxi)
+    if i == 0:
+        temp_list = [0]
+        i = i + 1
+    if(max(maxi_list) > max(temp_list)):
+        temp_list = hand
         card_values = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
-        final_list=list(card_values)
+        final_list = list(card_values)
         #print(final_list)
     if(len(final_list) == 3):
         return True
 
 def is_one_pair(hand):
-    i=0
-    maxi=set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
-    maxi_list=list(maxi)
-    
-    if i==0:
-        temp_list=[0]
-        i+=1
-    if(max(maxi_list)>max(temp_list)):
-        temp_list=hand
+    i = 0
+    maxi = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
+    maxi_list = list(maxi)
+    if i == 0:
+        temp_list = [0]
+        i = i + 1
+    if(max(maxi_list) > max(temp_list)):
+        temp_list = hand
         card_values = set(['--23456789TJQKA'.index(each_card_value) for each_card_value, each_suit in hand])
-        final_list=list(card_values)
+        final_list = list(card_values)
         #print(final_list)
     if(len(final_list) == 4):
         return True
