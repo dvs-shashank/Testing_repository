@@ -139,9 +139,7 @@ def hand_rank(hand):
        return 8
     elif is_three_of_a_kind(hand):
        return 9
-    
-    else:
-        return 0
+    return 0
 
 def poker(hands):
     '''
