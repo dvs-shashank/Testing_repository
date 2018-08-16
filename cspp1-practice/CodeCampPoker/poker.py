@@ -13,7 +13,7 @@ def dict_fun(hand):
             d[hand[i][0]] = 1
     return(d)
 #dict_fun(hand)
-def full_house(hand):
+def is_full_house(hand):
     dict_four = {}
     dict_four = dict_fun(hand)
     return len(dict_four) == 2 and 2 in dict_four.values() and 3 in dict_four.values()
