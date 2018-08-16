@@ -5,17 +5,25 @@
 '''
 #hand=['KC','5S','AD','4S','7D']
 def get_onlyfacevalues(hand):
+    '''
+    calculate face values
+    '''
     face_values = []
     index_str = '--23456789TJQKA'
-    for c, s in hand:
-        face_values.append(index_str.index(c))
+    for c_card, s_suit in hand:
+        face_values.append(index_str.index(c_card))
     return sorted(face_values)
 
 def is_highcard(hand):
+    '''
+    calculate high card
+    '''
     return len(set(get_onlyfacevalues(hand))) == 5
 def get_handrank(hand, size):
+    '''
+    calculate hand rank
+    '''
     face_values = get_onlyfacevalues(hand)
-
     if size == 1:
         return 1/100 * max(face_values)
 
@@ -25,6 +33,9 @@ def get_handrank(hand, size):
     return 0
 
 def get_suitrank(hand):
+    '''
+    calculate suit rank
+    '''
     face_values = get_onlyfacevalues(hand)
     return 1/100 * sum(face_values)
 
