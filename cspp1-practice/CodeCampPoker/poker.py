@@ -4,6 +4,23 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 #hand=['KC','5S','AD','4S','7D']
+def is_highcard(hand):
+    return len(set(get_onlyfacevalues(hand))) == 5
+def get_handrank(hand, size):
+    face_values = get_onlyfacevalues(hand)
+
+    if size == 1:
+        return 1/100 * max(face_values)
+
+    for each_hand in face_values:
+        if face_values.count(each_hand) == 2:
+            return 1/100 * int(each_hand)
+    return 0
+
+def get_suitrank(hand):
+    face_values = get_onlyfacevalues(hand)
+    return 1/100 * sum(face_values)
+
 def dict_fun(hand):
     '''
     conversion of list to dict
@@ -140,7 +157,7 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     # is_flush(hand)
     if is_straight(hand) and is_flush(hand):
-        return 9
+        return 9+get_suitrank(hand)
     if is_four_of_a_kind(hand):
         return 8
     if is_full_house(hand):
@@ -154,8 +171,11 @@ def hand_rank(hand):
     if is_two_pair(hand):
         return 3
     if is_one_pair(hand):
-        return 2
-    return 1
+        return 2+get_handrank(hand, 2)
+    if is_highcard(hand):
+        return 1 + get_handrank(hand, 1)
+    return 0
+
 
 def poker(hands):
     '''
