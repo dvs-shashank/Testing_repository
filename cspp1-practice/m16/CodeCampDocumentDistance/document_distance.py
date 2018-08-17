@@ -69,6 +69,7 @@ def similarity(doc1, doc2):
     doc2_list = remove_stop_words(doc1_list)
     freq_dict = get_freq_dictionary(doc1_list,doc2_list)
     final_score = compute_score(freq_dict)
+    return final_score
 
 def load_stopwords(filename):
     '''
