@@ -43,18 +43,18 @@ def remove_stop_words(doc_list):
 	removes stop words from our lists
 	'''
 	stopwords = load_stopwords("stopwords.txt")
-	temp_doc_list = doc_list
+	temp_doc_list = doc_list[:]
 	for each_word in temp_doc_list:
 		if each_word in stopwords:
 			doc_list.remove(each_word)
 	return doc_list
 
-def clean_up(D1):
+def clean_up(doc_1):
 	'''
 	removes unnecessary characters
 	'''
-	D1 = D1.lower()
-	data_list = D1.split()
+	doc_1 = doc_1.lower()
+	data_list = doc_1.split("")
 	count = 0
 	while count < len(data_list):
 		data_list[count] = re.sub("[^a-z]","",data_list[count])
