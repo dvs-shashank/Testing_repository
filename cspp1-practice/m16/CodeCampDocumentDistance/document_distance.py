@@ -55,7 +55,7 @@ def clean_up(D1):
 	data_list = D1.split()
 	count = 0
 	while count < len(data_list):
-		data_list[count] = re.sub(^"a-z","",data_list[count])
+		data_list[count] = re.sub(^"[a-z]","",data_list[count])
 		count += 1
 	return data_list
 
