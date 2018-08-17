@@ -9,15 +9,17 @@ def get_freq_dictionary(doc1_list,doc2_list):
 	'''
 	freq_dict = {}
 	for each_word in doc1_list:
-		if each_word not in freq_dict:
-			freq_dict[each_word] = [1,0]
-		else:
-			freq_dict[each_word][0] += 1
+		if len(each_word) > 0:
+			if each_word not in freq_dict:
+				freq_dict[each_word] = [1,0]
+			else:
+				freq_dict[each_word][0] += 1
 	for each_word in doc2_list:
-		if each_word not in freq_dict:
-			freq_dict[each_word] = [0,1]
-		else:
-			freq_dict[each_word][1] += 1
+		if len(each_word) > 0:
+			if each_word not in freq_dict:
+				freq_dict[each_word] = [0,1]
+			else:
+				freq_dict[each_word][1] += 1
 	return freq_dict
 
 def compute_score(freq_dict):
