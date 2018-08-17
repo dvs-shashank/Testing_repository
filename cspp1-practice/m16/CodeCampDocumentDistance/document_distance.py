@@ -63,8 +63,8 @@ def similarity(doc1, doc2):
     '''
         Compute the document distance as given in the PDF
     '''
-    doc1_list = clean_up(dict1)
-    doc2_list = clean_up(dict2)
+    doc1_list = clean_up(doc1)
+    doc2_list = clean_up(doc2)
     doc1_list = remove_stop_words(doc2_list)
     doc2_list = remove_stop_words(doc1_list)
     freq_dict = get_freq_dictionary(doc1_list,doc2_list)
