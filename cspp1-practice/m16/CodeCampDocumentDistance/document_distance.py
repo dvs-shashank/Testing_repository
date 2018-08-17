@@ -4,62 +4,62 @@
 import re
 import math
 def get_freq_dictionary(doc1_list, doc2_list):
-	'''
-	calcualtes and returns frequency dictionary
-	'''
-	freq_dict = {}
-	for each_word in doc1_list:
-		if len(each_word) > 0:
-			if each_word not in freq_dict:
-				freq_dict[each_word] = [1, 0]
-			else:
-				freq_dict[each_word][0] += 1
-	for each_word in doc2_list:
-		if len(each_word) > 0:
-			if each_word not in freq_dict:
-				freq_dict[each_word] = [0, 1]
-			else:
-				freq_dict[each_word][1] += 1
-	return freq_dict
+    '''
+    calcualtes and returns frequency dictionary
+    '''
+    freq_dict = {}
+    for each_word in doc1_list:
+        if len(each_word) > 0:
+            if each_word not in freq_dict:
+                freq_dict[each_word] = [1, 0]
+            else:
+                freq_dict[each_word][0] += 1
+    for each_word in doc2_list:
+        if len(each_word) > 0:
+            if each_word not in freq_dict:
+                freq_dict[each_word] = [0, 1]
+            else:
+                freq_dict[each_word][1] += 1
+    return freq_dict
 
 def compute_score(freq_dict):
-	'''
-	calculates the score and returns
-	'''
-	cal_num = 0
-	cal_denom1 = 0
-	cal_denom2 = 0
-	cal_denum = 0
-	for key in freq_dict:
-		freq_list = freq_dict[key]
-		cal_num += (freq_list[0] * freq_list[1])
-		cal_denom1 += freq_list[0] ** 2
-		cal_denom2 += freq_list[1] ** 2
-	cal_denum = math.sqrt(cal_denom1) * math.sqrt(cal_denom2)
-	return cal_num / cal_denum
+    '''
+    calculates the score and returns
+    '''
+    cal_num = 0
+    cal_denom1 = 0
+    cal_denom2 = 0
+    cal_denum = 0
+    for key in freq_dict:
+        freq_list = freq_dict[key]
+        cal_num += (freq_list[0] * freq_list[1])
+        cal_denom1 += freq_list[0] ** 2
+        cal_denom2 += freq_list[1] ** 2
+    cal_denum = math.sqrt(cal_denom1) * math.sqrt(cal_denom2)
+    return cal_num / cal_denum
 
 def remove_stop_words(doc_list):
-	'''
-	removes stop words from our lists
-	'''
-	stop_words = load_stopwords("stopwords.txt")
-	temp_doc_list = doc_list[:]
-	for each_word in temp_doc_list:
-		if each_word in stop_words:
-			doc_list.remove(each_word)
-	return doc_list
+    '''
+    removes stop words from our lists
+    '''
+    stop_words = load_stopwords("stopwords.txt")
+    temp_doc_list = doc_list[:]
+    for each_word in temp_doc_list:
+        if each_word in stop_words:
+            doc_list.remove(each_word)
+    return doc_list
 
 def clean_up(doc_1):
-	'''
-	removes unnecessary characters
-	'''
-	doc_1 = doc_1.lower()
-	data_list = doc_1.split(" ")
-	count = 0
-	while count < len(data_list):
-		data_list[ count ] = re.sub("[^a-z]", "", data_list[count])
-		count += 1
-	return data_list
+    '''
+    removes unnecessary characters
+    '''
+    doc_1 = doc_1.lower()
+    data_list = doc_1.split(" ")
+    count = 0
+    while count < len(data_list):
+        data_list[ count ] = re.sub("[^a-z]", "", data_list[count])
+        count += 1
+    return data_list
 
 def similarity(doc1, doc2):
     '''
