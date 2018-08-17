@@ -57,7 +57,7 @@ def clean_up(doc_1):
     data_list = doc_1.split(" ")
     count = 0
     while count < len(data_list):
-        data_list[ count ] = re.sub("[^a-z]", "", data_list[count])
+        data_list[count] = re.sub("[^a-z]", "", data_list[count])
         count += 1
     return data_list
 
