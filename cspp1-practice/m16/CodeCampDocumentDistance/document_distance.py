@@ -11,13 +11,13 @@ def get_freq_dictionary(doc1_list, doc2_list):
 	for each_word in doc1_list:
 		if len(each_word) > 0:
 			if each_word not in freq_dict:
-				freq_dict[each_word] = [1,0]
+				freq_dict[each_word] = [1, 0]
 			else:
 				freq_dict[each_word][0] += 1
 	for each_word in doc2_list:
 		if len(each_word) > 0:
 			if each_word not in freq_dict:
-				freq_dict[each_word] = [0,1]
+				freq_dict[each_word] = [0, 1]
 			else:
 				freq_dict[each_word][1] += 1
 	return freq_dict
@@ -28,13 +28,13 @@ def compute_score(freq_dict):
 	'''
 	cal_num = 0
 	cal_denom1 = 0
-	cal_denom2 = 0 
+	cal_denom2 = 0
 	cal_denum = 0
 	for key in freq_dict:
 		freq_list = freq_dict[key]
 		cal_num += (freq_list[0] * freq_list[1])
 		cal_denom1 += freq_list[0] ** 2
-		cal_denom2 +=  freq_list[1] ** 2
+		cal_denom2 += freq_list[1] ** 2
 	cal_denum = math.sqrt(cal_denom1) * math.sqrt(cal_denom2)
 	return cal_num / cal_denum
 
