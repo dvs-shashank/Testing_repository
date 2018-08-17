@@ -73,12 +73,12 @@ def similarity(doc1, doc2):
     final_score = compute_score(freq_dict)
     return final_score
 
-def load_stopwords(filename):
+def load_stopwords(file_name):
     '''
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(filename, 'r') as filename:
+    with open(file_name, 'r') as filename:
         for line in filename:
             stopwords[line.strip()] = 0
     return stopwords
