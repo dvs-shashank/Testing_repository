@@ -40,10 +40,10 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    temp_list1=[]
-    temp_list2=[]
-    temp_list3=temp_list2[:]
-    temp_list1=text.splitlines()
+    temp_list1 = []
+    temp_list2 = []
+    temp_list3 = temp_list2[:]
+    temp_list1 = text.splitlines()
     for each_sentence in temp_list1:
         each_sentence.lower()
         temp_list2 = each_sentence.split(" ")
@@ -69,7 +69,7 @@ def build_search_index(docs):
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
     #doc_list = clean_up(doc_list)
-    #word_list = []
+    word_list = []
     docs_id = ()
     for i in range(len(docs)):
         if docs[i] != "\n":
@@ -83,7 +83,7 @@ def build_search_index(docs):
     word_list = word_list(docs)
     for each_word in word_list:
         if each_word not in search_index_dict:
-            search_index_dict[each_word] = [(docs_id , 1)]
+            search_index_dict[each_word] = [(docs_id, 1)]
         else:
             search_index_dict[each_word][0][1] += 1
 
