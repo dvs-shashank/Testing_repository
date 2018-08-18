@@ -85,7 +85,7 @@ def build_search_index(docs):
         #doc_list = docs.splitlines()
     for each_word in words_list:
         if each_word not in search_index_dict:
-            search_index_dict[each_word] = [docs_id, 1]
+            search_index_dict[each_word] = [(docs_id, 1)]
         else:
             search_index_dict[each_word][0][1] += 1
 
