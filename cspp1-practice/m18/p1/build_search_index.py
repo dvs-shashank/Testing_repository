@@ -78,10 +78,10 @@ def build_search_index(docs):
         if docs[i] != "\n":
             val_x = 0
             if val_x == 0:
-                docs_id = docs_id+(val_x,)
+                docs_id = docs_id + (val_x,)
             else:
                 val_x += 1
-                docs_id = docs_id+(val_x,)
+                docs_id = docs_id + (val_x,)
         #doc_list = docs.splitlines()
     for each_word in words_list:
         if each_word not in search_index_dict:
