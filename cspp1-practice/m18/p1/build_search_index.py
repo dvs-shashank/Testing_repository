@@ -42,8 +42,8 @@ def word_list(text):
     '''
     #temp_list1 = []
     #temp_list2 = []
-    temp_list3 = temp_list2[:]
     temp_list1 = text.splitlines()
+    temp_list3 = temp_list1[:]
     for each_sentence in temp_list1:
         each_sentence.lower()
         temp_list2 = each_sentence.split(" ")
