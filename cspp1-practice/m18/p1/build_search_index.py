@@ -70,6 +70,7 @@ def build_search_index(docs):
     # hint: use enumerate to obtain the list index in the for loop
     #doc_list = clean_up(doc_list)
     words_list = []
+    words_list = word_list(docs)
     docs_id = ()
     for i in range(len(docs)):
         if docs[i] != "\n":
@@ -80,7 +81,6 @@ def build_search_index(docs):
                 val_x += 1
                 docs_id = docs_id+(val_x,)
         #doc_list = docs.splitlines()
-    words_list = word_list(docs)
     for each_word in words_list:
         if each_word not in search_index_dict:
             search_index_dict[each_word] = [(docs_id, 1)]
