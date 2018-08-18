@@ -45,10 +45,10 @@ def word_list(text):
     temp_list1 = text.splitlines()
     stopwords = "stopwords.txt"
     temp_list3 = temp_list1[:]
-    for each_sentence in temp_list1:
-        each_sentence.lower()
-        temp_list2 = each_sentence.split(" ")
-        re.sub("^[a-z]", "", temp_list2[each_sentence])
+    for i in range(temp_list1):
+        temp_list1[i].lower()
+        temp_list2 = temp_list1[i].split(" ")
+        re.sub("[^a-z]", "", temp_list2[i])
     stopwords = "stopwords.txt"
     #temp dict = {}
     for each_word in temp_list3:
