@@ -66,6 +66,7 @@ def build_search_index(docs):
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
     #doc_list = clean_up(doc_list)
+    word_list=[]
     docs_id = ()
     for i in range(len(docs)):
     	if docs[i] != "\n":
