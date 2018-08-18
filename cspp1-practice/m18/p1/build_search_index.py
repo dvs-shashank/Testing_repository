@@ -41,16 +41,19 @@ def word_list(text):
         return a list of words
     '''
     temp_list1=[]
-    for each_sentence in word_list:
+    temp_list2=[]
+    temp_list3=temp_list2[:]
+    temp_list1=text.splitlines()
+    for each_sentence in temp_list1:
     	each_sentence.lower()
-    	temp_list1 = each_sentence.split(" ")
-    	re.sub("^[a-z]", "", temp_list1)
+    	temp_list2 = each_sentence.split(" ")
+    	re.sub("^[a-z]", "", temp_list2)
     stopwords = "stopwords.txt"
     #temp dict = {}
-    for each_word in temp_list1:
+    for each_word in temp_list3:
     	if each_word in stopwords:
-    		temp_list1.remove(each_word)
-    return temp_list1
+    		temp_list3.remove(each_word)
+    return temp_list3
 
 
 
@@ -77,15 +80,13 @@ def build_search_index(docs):
         		x += 1
         		docs_id=docs_id+(x,)
     	#doc_list = docs.splitlines()
-    	word_list=word_list(doc_list)
+    	word_list=word_list(docs)
     for each_word in word_list:
     	if each_word not in search_index_dict:
     		search_index_dict[each_word] = [(docs_id , 1)]
     	else:
     		search_index_dict[each_word][0][1] += 1
 
-
-        
 
         # clean up doc and tokenize to words list
 
