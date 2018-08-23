@@ -75,8 +75,9 @@ def main():
     # read matrix 2
     mat_2 = read_matrix()
     # add matrix 1 and matrix 2
-    add = add_matrix(mat_1, mat_2)
+     print(add_matrix(mat_1, mat_2)) 
     # multiply matrix 1 and matrix 2
+    print   (mult_matrix(mat_1, mat_2))
     
 
 if __name__ == '__main__':
