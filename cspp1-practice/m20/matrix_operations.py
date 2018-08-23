@@ -12,9 +12,9 @@ def mult_matrix(m1, m2):
         row_matrix = []
         for j in range(len(m2[0])):
             val = 0
-                for k in range(len(m1[0])):
-                    val += m1[i][k] * m2[k][j]
-                    row_matrix.append(val)
+            for k in range(len(m1[0])):
+                val += m1[i][k] * m2[k][j]
+            row_matrix.append(val)
         result_matrix.append(row_matrix)
     return result_matrix
     
