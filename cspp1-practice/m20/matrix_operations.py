@@ -45,27 +45,27 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    try:
-        size_of_matrix1 = input()
-        size_of_matrix1 = size_of_matrix1.split(",")
-        matrix1 = []
-        size_of_matrix1[0] = int(size_of_matrix1[0])
-        size_of_matrix1[1] = int(size_of_matrix1[1])
-        for i in range(size_of_matrix1[1]):
-            matrix1.append([])
-        for i in range(size_of_matrix1[0]):
-            for j in range(size_of_matrix1[1]):
-                matrix1[i].append(j)
-                matrix1[i][j]=0
-        for i in range(0,size_of_matrix1[0],size_of_matrix1[1]):
-            for j in range(size_of_matrix1[1]):
+    #ry:
+    size_of_matrix1 = input()
+    size_of_matrix1 = size_of_matrix1.split(",")
+    matrix1 = []
+    size_of_matrix1[0] = int(size_of_matrix1[0])
+    size_of_matrix1[1] = int(size_of_matrix1[1])
+    for i in range(size_of_matrix1[1]):
+        matrix1.append([])
+    for i in range(size_of_matrix1[0]):
+        for j in range(size_of_matrix1[1]):
+            matrix1[i].append(j)
+            matrix1[i][j]=0
+    for i in range(0,size_of_matrix1[0],size_of_matrix1[1]):
+        for j in range(size_of_matrix1[1]):
             #row_values = input("enter")
-                row_values = [int(number) for number in row_values.split(" ")]
+            row_values = [int(number) for number in row_values.split(" ")]
             #print(row_values)
-                matrix1[j] = row_values
-        return matrix1
-    except:
-        print("Error: Invalid input for the matrix")
+            matrix1[j] = row_values
+    return matrix1
+    #xcept:
+    #  print("Error: Invalid input for the matrix")
         #eturn None
 
 def main():
