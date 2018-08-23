@@ -28,9 +28,9 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     result_matrix = []
-    for i in range len(m1):
+    for i in range(len(m1)):
         row_matrix = []
-        for j in range len(m1[0]):
+        for j in range(len(m1[0])):
             row_matrix.append(m1[i][j] + m2[i][j])
         result_matrix.append(row_matrix)
     return result_matrix
