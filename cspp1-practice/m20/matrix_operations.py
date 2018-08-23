@@ -46,27 +46,17 @@ def read_matrix():
         error message should be "Error: Invalid input for the matrix"
     '''
     #ry:
-    size_of_matrix1 = input()
-    size_of_matrix1 = size_of_matrix1.split(",")
-    matrix1 = []
-    size_of_matrix1[0] = int(size_of_matrix1[0])
-    size_of_matrix1[1] = int(size_of_matrix1[1])
-    for i in range(size_of_matrix1[1]):
-        matrix1.append([])
-    for i in range(size_of_matrix1[0]):
-        for j in range(size_of_matrix1[1]):
-            matrix1[i].append(j)
-            matrix1[i][j]=0
-    for i in range(0,size_of_matrix1[0],size_of_matrix1[1]):
-        for j in range(size_of_matrix1[1]):
-            #row_values = input("enter")
-            row_values = [int(number) for number in row_values.split(" ")]
-            #print(row_values)
-            matrix1[j] = row_values
-    return matrix1
-    #xcept:
-    #  print("Error: Invalid input for the matrix")
-        #eturn None
+    matrix_1 = read_matrix()
+    # print(matrix_1)
+    # read matrix 2
+    matrix_2 = read_matrix()
+
+    if matrix_1 != False and matrix_2 != False:
+        # print(matrix_2)
+        # add matrix 1 and matrix 2
+        print(add_matrix(matrix_1, matrix_2))
+        # multiply matrix 1 and matrix 2
+        print(mult_matrix(matrix_1, matrix_2))
 
 def main():
 
