@@ -56,9 +56,6 @@ def word_list(text):
             temp_list3.remove(each_word)
     return temp_list3
 
-
-
-
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
@@ -88,14 +85,10 @@ def build_search_index(docs):
             search_index_dict[each_word] = [(docs_id, 1)]
         else:
             search_index_dict[each_word][0][1] += 1
-
-
         # clean up doc and tokenize to words list
-
         # add or update the words of the doc to the search index
-
     # return search index
-    print_search_index(search_index_dict)
+    #print_search_index(search_index_dict)
     return search_index_dict
 
 # helper function to print the search index
@@ -109,6 +102,7 @@ def print_search_index(index):
         print(key, " - ", index[key])
 
 # main function that loads the docs from files
+
 def main():
     '''
         main function
