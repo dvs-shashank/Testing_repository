@@ -66,7 +66,7 @@ def read_matrix():
         return matrix1
     except:
         print("Error: Invalid input for the matrix")
-        return None
+        #eturn None
 
 def main():
 
