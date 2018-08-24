@@ -1,3 +1,6 @@
+'''
+program for matrices
+'''
 def mult_matrix(m1, m2):
     '''
         check if the matrix1 columns = matrix2 rows
