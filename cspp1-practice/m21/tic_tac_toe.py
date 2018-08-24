@@ -21,7 +21,7 @@ def calculate_winner(game_list):
     if ((game_list[0][1]=='x' and game_list[1][1]=='x') and (game_list[2][1]=='x')):
         return 'x'
     else:
-        return "invalid game"
+        return "invalid input"
 
     
 def play_game():
