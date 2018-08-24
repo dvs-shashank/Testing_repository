@@ -6,18 +6,25 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    
-    result_matrix = []
-    for i in range(len(m1)):
-        row_matrix = []
-        for j in range(len(m2[0])):
-            val = 0
-            for k in range(len(m1[0])):
-                val += m1[i][k] * m2[k][j]
-            row_matrix.append(val)
-        result_matrix.append(row_matrix)
-    return result_matrix
-    
+    # print('MULTIPLICATION: ', m1, m2)
+    size_m1 = len(m1)
+    size_n1 = len(m1[0])
+    size_m2 = len(m2)
+    size_n2 = len(m2[0])
+        #m/n : m1/n2
+    result = [0] * size_m1
+    for i in range(size_m1):
+        result[i] = [0] * size_n2
+
+    if size_n1 == size_m2:
+        for i in range(size_m1):
+            for j in range(size_n2):
+                for k in range(size_m2):
+                    result[i][j] += m1[i][k] * m2[k][j]
+
+        return result
+    else:
+        print('Error: Matrix shapes invalid for mult')
 
 def add_matrix(m1, m2):
     '''
@@ -27,15 +34,18 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    result_matrix = []
-    for i in range(len(m1)):
-        row_matrix = []
-        for j in range(len(m1[0])):
-            row_matrix.append(m1[i][j] + m2[i][j])
-        result_matrix.append(row_matrix)
-    return result_matrix
+    try:
+        result = [0] * m
+        for each in range(m):
+            result[each] = [0] * n
 
+        for i in range(m):
+            for j in range(n):
+                result[i][j] = m1[i][j] + m2[i][j]
 
+        return result
+    except:
+        print('Error: Matrix shapes invalid for addition')
 
 def read_matrix():
     '''
@@ -45,7 +55,31 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    #ry:
+    try:
+        dim_str = input().split(',')
+        global m
+        m = int(dim_str[0])
+        global n
+        n = int(dim_str[1])
+
+        matrix = [0] * m
+        for each in range(m):
+            matrix[each] = [0] * n
+
+        for i in range(m):
+            row_str = input().split(' ')
+            # print(row_str)
+            row_str = list(map(int, row_str))
+            # print(row_str)
+            for j in range(n):
+                matrix[i][j] = row_str[j]
+        return matrix
+    except:
+        print('Error: Invalid input for the matrix')
+        return False
+
+def main():
+    # read matrix 1
     matrix_1 = read_matrix()
     # print(matrix_1)
     # read matrix 2
@@ -57,18 +91,6 @@ def read_matrix():
         print(add_matrix(matrix_1, matrix_2))
         # multiply matrix 1 and matrix 2
         print(mult_matrix(matrix_1, matrix_2))
-
-def main():
-
-
-    mat_1 = read_matrix()
-    # read matrix 2
-    mat_2 = read_matrix()
-    # add matrix 1 and matrix 2
-    print(add_matrix(mat_1, mat_2)) 
-    # multiply matrix 1 and matrix 2
-    print   (mult_matrix(mat_1, mat_2))
-    
 
 if __name__ == '__main__':
     main()
