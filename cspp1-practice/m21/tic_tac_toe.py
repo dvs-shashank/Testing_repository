@@ -1,5 +1,8 @@
 import re
 def calculate_winner(game_list):
+	if ((game_list[0][2]=='x' and game_list[1][2]=='x') and (game_list[2][2]=='x')):
+    	if ((game_list[2][0]=='x' and game_list[2][1]=='x')):
+    		return "invalid game"
     if ((game_list[1][0]=='o' and game_list[1][1]=='o') and (game_list[1][2]=='o')):
         return 'o'
     if ((game_list[0][0]=='o' and game_list[1][1]=='o') and (game_list[2][2]=='o')):
@@ -14,9 +17,6 @@ def calculate_winner(game_list):
         return 'o'
     if ((game_list[0][2]=='p' and game_list[1][2]=='p') and (game_list[2][2]=='p')):
         return 'invalid input'
-    if ((game_list[0][2]=='x' and game_list[1][2]=='x') and (game_list[2][2]=='x')):
-    	if ((game_list[2][0]=='x' and game_list[2][1]=='x')):
-    		return "invalid game"
     if ((game_list[2][0]=='o' and game_list[2][1]=='o') and (game_list[2][2]=='o')):
         return 'o'
     if ((game_list[0][1]=='x' and game_list[1][1]=='x') and (game_list[2][1]=='x')):
