@@ -41,13 +41,11 @@ def play_game():
         game_panel += [user_input]
     #print(game_panel)    
     print(calculate_winner(game_panel))
-    
 def main():
     '''
     main
     '''
     play_game()
-
 
 if __name__ == '__main__':
     main()
