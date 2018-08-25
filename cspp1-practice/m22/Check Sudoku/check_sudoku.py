@@ -10,7 +10,7 @@
 
 
 def data_validation(sudoku):
-    list_num = ['1','2','3','4','5','6','7','8','9']
+    list_num = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     count = 0
     for i in range(len(sudoku)):
         temp_list = list_num[:]
@@ -24,10 +24,7 @@ def data_validation(sudoku):
             count += 1
             #print(count)
     if count != 9:
-        return False
-    
-    
-    
+        return False  
 
 def check_sudoku(sudoku):
     '''
@@ -36,7 +33,7 @@ def check_sudoku(sudoku):
     '''
     #print(sudoku)
     global num_list
-    num_list = ['1','2','3','4','5','6','7','8','9']
+    num_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     flag = data_validation(sudoku)
     if flag== True:
         for i in sudoku:
@@ -50,10 +47,8 @@ def main():
         main function to read input sudoku from console
         call check_sudoku function and print the result to console
     '''
-    
     # initialize empty list
     sudoku = []
-
     # loop to read 9 lines of input from console
     for i in range(9):
         # read a line, split it on SPACE and append row to list
