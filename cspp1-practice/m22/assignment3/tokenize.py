@@ -16,7 +16,7 @@ def tokenize(string):
         else:
             token_dict[each_val] += 1
     return token_dict
-            
+         
 def main():
     num_lines = int(input())
     i = 1
