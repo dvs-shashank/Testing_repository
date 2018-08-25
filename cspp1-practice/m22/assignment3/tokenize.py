@@ -4,10 +4,29 @@ each word
 '''
 
 def tokenize(string):
-    pass
+    '''
+    tokenise method
+    '''
+    token_dict = {}
+    string_list = string.split(" ")
+    
+    #print(string_list)
+    for each_val in string_list:
+        if each_val not in token_dict:
+            token_dict[each_val] = 1
+        else:
+            token_dict[each_val] += 1
+    return token_dict
             
 def main():
-    pass
+    num_lines = int(input())
+    i = 1
+    while i <= num_lines:
+        user_input = input()
+        #user_input.replace(";","")
+        #print(user_input)
+        i += 1
+    print(tokenize(user_input))
 
 if __name__ == '__main__':
     main()
