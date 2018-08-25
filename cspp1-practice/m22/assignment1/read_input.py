@@ -2,9 +2,7 @@
 Write a python program to read multiple lines of text input and store the input into a string.
 '''
 def main():
-	'''
-        main function to read input  from console
-    '''
+	#function implementation
     num_lines = int(input())
     i = 1
     while i <= num_lines:
