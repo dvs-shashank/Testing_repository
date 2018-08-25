@@ -19,10 +19,10 @@ def data_validation(sudoku):
             #print("jerey")
             if sudoku[i][j] in temp_list:
                 temp_list.remove(sudoku[i][j])
-                print(temp_list)
+                #print(temp_list)
         if len(temp_list) == 0:
             count += 1
-            print(count)
+            #print(count)
     if count != 9:
         return False
     
