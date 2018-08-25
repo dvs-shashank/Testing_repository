@@ -12,7 +12,7 @@ def print_dictionary(dictionary):
     #print(key)
         print_keys = ""
         print_keys += key
-        print(print_keys,'-',val)
+        print(print_keys, '-', val)
 
 def main():
     dictionary = eval(input())
