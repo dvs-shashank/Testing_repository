@@ -36,8 +36,8 @@ def check_sudoku(sudoku):
     '''
     #print(sudoku)
     num_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-    flag = data_validation(sudoku)
-    if flag == True:
+    #flag = data_validation(sudoku)
+    if data_validation(sudoku) == True:
         for i in sudoku:
             for j in i:
                 if j not in num_list:
