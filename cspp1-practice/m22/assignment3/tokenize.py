@@ -18,9 +18,6 @@ def tokenize(string):
     return token_dict
 
 def main():
-'''
-main method implementation for tokenizing string
-'''
     num_lines = int(input())
     i = 1
     while i <= num_lines:
