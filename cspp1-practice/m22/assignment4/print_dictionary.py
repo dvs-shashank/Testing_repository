@@ -8,11 +8,11 @@ import collections
 def print_dictionary(dictionary):
     dictionary = collections.OrderedDict(sorted(dictionary.items()))
     print_values = ""
-	for key,val in dictionary.items():
+    for key,val in dictionary.items():
     #print(key)
-    	print_keys = ""
-    	print_keys += key
-    	print(print_keys,'-',val)
+        print_keys = ""
+        print_keys += key
+        print(print_keys,'-',val)
 
 def main():
     dictionary = eval(input())
