@@ -9,7 +9,6 @@ def tokenize(string):
     '''
     token_dict = {}
     string_list = string.split(" ")
-    
     #print(string_list)
     for each_val in string_list:
         if each_val not in token_dict:
