@@ -7,11 +7,11 @@ def clean_string(string):
     '''
     cleaning input function
     '''
-    special_chars = ['!','@','#','$','%','^','&','*','(',')','_','+','.']
-    string=string.replace(" ","")
+    special_chars = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '.']
+    string = string.replace(" ", "")
     for each_char in string:
         if each_char in special_chars:
-            string=string.replace(each_char,"")
+            string = string.replace(each_char, "")
     return string
 
 def main():
