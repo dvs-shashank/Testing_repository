@@ -6,8 +6,11 @@ the key and frequency with a SPACE - SPACE.
 import collections
 
 def print_dictionary(dictionary):
+    '''
+    function for printing as per requirement
+    '''
     dictionary = collections.OrderedDict(sorted(dictionary.items()))
-    print_values = ""
+    #print_values = ""
     for key,val in dictionary.items():
     #print(key)
         print_keys = ""
