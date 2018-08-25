@@ -32,7 +32,6 @@ def check_sudoku(sudoku):
         The function has to return True for a valid sudoku grid and false otherwise
     '''
     #print(sudoku)
-    global num_list
     num_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     flag = data_validation(sudoku)
     if flag == True:
