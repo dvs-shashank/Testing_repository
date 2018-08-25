@@ -15,9 +15,6 @@ def clean_string(string):
     return string
 
 def main():
-	'''
-		main method
-	'''
     string = input()
     print(clean_string(string))
 
