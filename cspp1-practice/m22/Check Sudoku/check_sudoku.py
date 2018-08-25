@@ -24,7 +24,7 @@ def data_validation(sudoku):
             count += 1
             #print(count)
     if count != 9:
-        return False  
+        return False
 
 def check_sudoku(sudoku):
     '''
@@ -35,7 +35,7 @@ def check_sudoku(sudoku):
     global num_list
     num_list = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     flag = data_validation(sudoku)
-    if flag== True:
+    if flag == True:
         for i in sudoku:
             for j in i:
                 if j not in num_list:
