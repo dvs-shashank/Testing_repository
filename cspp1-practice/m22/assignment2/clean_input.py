@@ -4,7 +4,15 @@ alphabets in both upper and lower case and numbers.
 '''
 
 def clean_string(string):
-    pass
+    '''
+    cleaning input function
+    '''
+    special_chars = ['!','@','#','$','%','^','&','*','(',')','_','+','.']
+    string=string.replace(" ","")
+    for each_char in string:
+        if each_char in special_chars:
+            string=string.replace(each_char,"")
+    return string
 
 def main():
     string = input()
